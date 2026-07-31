@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #003366;
+  --color-navy-deep: #00203f;
+  --color-orange: #ff6600;
+  --color-orange-soft: #ff8e42;
+  --color-teal: #006699;
+  --font-sans:
+    "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+@layer components {
+  .wrap {
+    @apply mx-auto w-full max-w-3xl px-5;
+  }
+  .section-h {
+    @apply text-2xl font-bold tracking-tight text-navy sm:text-3xl;
+  }
+  .kicker {
+    @apply font-mono text-xs uppercase tracking-[0.2em] text-orange;
+  }
+  .prose-archive {
+    @apply text-[0.95rem] leading-relaxed text-slate-700;
+  }
+  .prose-archive p + p {
+    @apply mt-4;
+  }
+  .quoted {
+    @apply border-l-4 border-orange/60 bg-slate-50 py-4 pl-5 pr-4;
+  }
+}
